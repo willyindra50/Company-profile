@@ -6,7 +6,7 @@ import { Check, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  'React Expertice',
+  'React Expert',
   'Pixel Perfect',
   'TypeScript Proficiency',
   'Clean, Maintainable Code',
