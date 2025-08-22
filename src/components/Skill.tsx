@@ -6,7 +6,7 @@ import { Check, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  'React Expert',
+  'React Expertice',
   'Pixel Perfect',
   'TypeScript Proficiency',
   'Clean, Maintainable Code',
@@ -20,7 +20,7 @@ export default function Skill() {
     <section className='relative w-full md:w-[1440px] h-auto md:h-[938px] bg-black overflow-hidden mx-auto flex items-center justify-center px-5 sm:px-8'>
       {/* Background full section pojok kiri bawah */}
       <Image
-        src='/BG-skill.png'
+        src='/BG-Skill.png'
         alt='Background Skill'
         fill
         className='absolute bottom-0 left-0 object-cover object-left-bottom'
