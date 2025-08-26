@@ -2,6 +2,7 @@
 'use client';
 import Image from 'next/image';
 import Navbar from './Navbar';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
@@ -10,42 +11,67 @@ export default function HeroSection() {
       <Navbar />
 
       {/* Background */}
-      <Image
-        src='/BG-Hero.png'
-        alt='Background Hero'
-        width={1440}
-        height={756}
-        className='absolute top-0 left-0 w-full h-full object-cover'
-        priority
-      />
+      <motion.div
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+        className='absolute top-0 left-0 w-full h-full'
+      >
+        <Image
+          src='/BG-Hero.png'
+          alt='Background Hero'
+          width={1440}
+          height={756}
+          className='w-full h-full object-cover'
+          priority
+        />
+      </motion.div>
 
       {/* Layout wrapper */}
       <div className='relative flex flex-col items-center md:block px-5 sm:px-8 md:px-0 mt-0 md:mt-0'>
         {/* Hero Card tampil di mobile */}
-        <Image
-          src='/hero-card.png'
-          alt='Hero Card'
-          width={341}
-          height={671}
-          className='block md:hidden w-[260px] sm:w-[300px] h-auto mb-6 mt-0'
-          priority
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+        >
+          <Image
+            src='/hero-card.png'
+            alt='Hero Card'
+            width={341}
+            height={671}
+            className='block md:hidden w-[260px] sm:w-[300px] h-auto mb-6 mt-0'
+            priority
+          />
+        </motion.div>
 
         {/* Konten teks */}
-        <div className='text-center md:text-left md:absolute top-[227px] left-[140px] max-w-[684px]'>
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+          className='text-center md:text-left md:absolute top-[227px] left-[140px] max-w-[684px]'
+        >
           <p className='text-white text-base sm:text-lg md:text-[18px] font-normal leading-relaxed mb-3 sm:mb-4 tracking-[0.5px]'>
             Hi, I&apos;m Edwin Anderson
           </p>
 
           <h1 className='text-white font-bold text-4xl sm:text-5xl md:text-[96px] leading-tight md:leading-[105px] tracking-[-1px]'>
             FRONT{' '}
-            <Image
-              src='/END.png'
-              alt='END'
-              width={100}
-              height={60}
-              className='inline-block align-baseline w-[80px] h-[40px] sm:w-[100px] sm:h-[60px] md:w-[150px] md:h-[80px]'
-            />
+            <motion.span
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
+              className='inline-block'
+            >
+              <Image
+                src='/END.png'
+                alt='END'
+                width={100}
+                height={60}
+                className='align-baseline w-[80px] h-[40px] sm:w-[100px] sm:h-[60px] md:w-[150px] md:h-[80px]'
+              />
+            </motion.span>
             <br />
             DEVELOPER
           </h1>
@@ -56,7 +82,10 @@ export default function HeroSection() {
             deliver a consistent experience across all platforms.
           </p>
 
-          <button
+          <motion.button
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1, ease: 'easeOut' }}
             onClick={() => {
               document
                 .getElementById('contact')
@@ -74,18 +103,24 @@ export default function HeroSection() {
               <path d='M0 6.383v5.634A2 2 0 0 0 2 14h12a2 2 0 0 0 2-2V6.383l-7.555 4.533a.5.5 0 0 1-.89 0L0 6.383z' />
             </svg>
             Hire Me
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         {/* Hero Card hanya desktop */}
-        <Image
-          src='/hero-card.png'
-          alt='Hero Card'
-          width={341}
-          height={671}
-          className='hidden md:block absolute top-0 right-[131px]'
-          priority
-        />
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
+        >
+          <Image
+            src='/hero-card.png'
+            alt='Hero Card'
+            width={341}
+            height={671}
+            className='hidden md:block absolute top-0 right-[131px]'
+            priority
+          />
+        </motion.div>
       </div>
     </section>
   );
