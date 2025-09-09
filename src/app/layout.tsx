@@ -1,10 +1,7 @@
-// app/layout.tsx
 import './globals.css';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'My App',
@@ -18,10 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={inter.className}>
-      <body className='bg-black'>
-        {/* Wrapper container biar responsive */}
-        <div className='w-full max-w-[1440px] mx-auto'>{children}</div>
-      </body>
+      <body className='bg-black'>{children}</body>
     </html>
   );
 }

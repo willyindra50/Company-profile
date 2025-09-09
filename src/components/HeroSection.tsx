@@ -53,7 +53,7 @@ export default function HeroSection() {
           className='text-center md:text-left md:absolute top-[227px] left-[140px] max-w-[684px]'
         >
           <p className='text-white text-base sm:text-lg md:text-[18px] font-normal leading-relaxed mb-3 sm:mb-4 tracking-[0.5px]'>
-            Hi, I&apos;m Edwin Anderson
+            Hi, I&apos;m Willy Indra
           </p>
 
           <h1 className='text-white font-bold text-4xl sm:text-5xl md:text-[96px] leading-tight md:leading-[105px] tracking-[-1px]'>

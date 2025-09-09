@@ -68,7 +68,7 @@ export default function About() {
         {/* Left Person Image */}
         <div className='flex justify-center md:block'>
           <Image
-            src='/person-laptop.png'
+            src='/person-laptop.jpg'
             alt='Person with Laptop'
             width={453}
             height={513}

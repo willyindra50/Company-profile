@@ -5,9 +5,27 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const projects = [
-  { id: 1, title: 'Portofolio 1', year: '2025', image: '/porto-1.png' },
-  { id: 2, title: 'Portofolio 2', year: '2025', image: '/porto-2.png' },
-  { id: 3, title: 'Portofolio 3', year: '2025', image: '/porto-3.png' },
+  {
+    id: 1,
+    title: 'Portofolio 1',
+    year: '2025',
+    image: '/porto-1.png',
+    link: 'https://willy-todolist.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Portofolio 2',
+    year: '2025',
+    image: '/porto-2.png',
+    link: 'https://blog-artikel-willy.vercel.app/',
+  },
+  {
+    id: 3,
+    title: 'Portofolio 3',
+    year: '2025',
+    image: '/porto-3.png',
+    link: 'https://willy-olshop.vercel.app/',
+  },
 ];
 
 export default function Projects() {
@@ -25,8 +43,11 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 w-full max-w-[1200px]'>
         {projects.map((project, idx) => (
-          <motion.div
+          <motion.a
             key={project.id}
+            href={project.link}
+            target='_blank'
+            rel='noopener noreferrer'
             className='flex flex-col items-center'
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +74,7 @@ export default function Projects() {
                 {project.year}
               </p>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>
