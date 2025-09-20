@@ -64,7 +64,7 @@ export default function Tools() {
   const scrollRef = React.useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ container: scrollRef });
 
-  // scroll ke Contact.tsx (pastikan section contact punya id="contact")
+  // scroll ke Contact.tsx
   const handleSendMessage = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -72,11 +72,11 @@ export default function Tools() {
   return (
     <section
       aria-labelledby='tools-title'
-      className='relative w-full md:w-[1440px] h-auto md:h-[689px] bg-black mx-auto text-white flex items-center py-12 md:py-0'
+      className='relative w-full h-auto md:h-[689px] bg-black text-white flex items-center py-12 md:py-0'
     >
       <div className='w-full max-w-[1200px] mx-auto px-5 sm:px-8 md:px-12'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-12 md:gap-0'>
-          {/* LEFT (digeser kiri dikit biar sejajar) */}
+          {/* LEFT */}
           <div className='w-full md:w-[367px] flex flex-col justify-between h-auto md:h-[529px] -ml-1 sm:-ml-2 md:-ml-3'>
             <div>
               <h2
@@ -168,7 +168,7 @@ export default function Tools() {
         </div>
       </div>
 
-      {/* ⛔️ CSS buat hilangin scrollbar default */}
+      {/* ⛔️ CSS hilangin scrollbar */}
       <style jsx global>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;

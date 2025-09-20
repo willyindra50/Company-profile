@@ -17,7 +17,7 @@ const skills = [
 
 export default function Skill() {
   return (
-    <section className='relative w-full md:w-[1440px] h-auto md:h-[938px] bg-black overflow-hidden mx-auto flex items-center justify-center px-5 sm:px-8'>
+    <section className='relative w-full h-auto md:h-[938px] bg-black overflow-hidden flex items-center justify-center px-5 sm:px-8'>
       {/* Background full section pojok kiri bawah */}
       <Image
         src='/BG-Skill.png'
@@ -27,7 +27,7 @@ export default function Skill() {
         priority
       />
 
-      <div className='relative flex flex-col items-center text-center w-full'>
+      <div className='relative flex flex-col items-center text-center w-full max-w-[1200px] mx-auto'>
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -55,7 +55,7 @@ export default function Skill() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className='w-full max-w-[1200px] bg-black border border-[#1E293B] rounded-lg overflow-hidden'
+          className='w-full bg-black border border-[#1E293B] rounded-lg overflow-hidden'
         >
           <table className='w-full text-left text-white'>
             <thead>
@@ -74,9 +74,7 @@ export default function Skill() {
               variants={{
                 hidden: {},
                 show: {
-                  transition: {
-                    staggerChildren: 0.15,
-                  },
+                  transition: { staggerChildren: 0.15 },
                 },
               }}
             >

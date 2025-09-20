@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
-    <section className='relative w-full md:w-[1440px] h-auto md:h-[756px] bg-black overflow-hidden mx-auto'>
+    <section className='relative w-full bg-black overflow-hidden'>
       {/* Navbar */}
       <Navbar />
 
@@ -15,42 +15,51 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 1.1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className='absolute top-0 left-0 w-full h-full'
+        className='absolute inset-0'
       >
         <Image
           src='/BG-Hero.png'
           alt='Background Hero'
-          width={1440}
-          height={756}
-          className='w-full h-full object-cover'
+          fill
+          sizes='100vw'
+          className='object-cover'
           priority
         />
       </motion.div>
 
       {/* Layout wrapper */}
-      <div className='relative flex flex-col items-center md:block px-5 sm:px-8 md:px-0 mt-0 md:mt-0'>
-        {/* Hero Card tampil di mobile */}
+      <div
+        className='
+  relative w-full 
+  max-w-[1440px] mx-auto 
+  px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 
+  flex flex-col md:flex-row items-center justify-between 
+  min-h-[756px]
+'
+      >
+        {/* Hero Card (mobile only) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          className='md:hidden mb-6'
         >
           <Image
             src='/hero-card.png'
             alt='Hero Card'
             width={341}
             height={671}
-            className='block md:hidden w-[260px] sm:w-[300px] h-auto mb-6 mt-0'
+            className='w-[260px] sm:w-[300px] h-auto'
             priority
           />
         </motion.div>
 
-        {/* Konten teks */}
+        {/* Text content */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-          className='text-center md:text-left md:absolute top-[227px] left-[140px] max-w-[684px]'
+          className='flex-1 text-center md:text-left max-w-[684px]'
         >
           <p className='text-white text-base sm:text-lg md:text-[18px] font-normal leading-relaxed mb-3 sm:mb-4 tracking-[0.5px]'>
             Hi, I&apos;m Willy Indra
@@ -67,8 +76,8 @@ export default function HeroSection() {
               <Image
                 src='/END.png'
                 alt='END'
-                width={100}
-                height={60}
+                width={150}
+                height={80}
                 className='align-baseline w-[80px] h-[40px] sm:w-[100px] sm:h-[60px] md:w-[150px] md:h-[80px]'
               />
             </motion.span>
@@ -76,7 +85,7 @@ export default function HeroSection() {
             DEVELOPER
           </h1>
 
-          <p className='text-[#94A3B8] text-sm sm:text-base md:text-[16.5px] leading-relaxed md:leading-[28px] font-normal max-w-[684px] mt-5 sm:mt-6'>
+          <p className='text-[#94A3B8] text-sm sm:text-base md:text-[16.5px] leading-relaxed md:leading-[28px] font-normal mt-5 sm:mt-6'>
             Passionate about frontend development, I focus on crafting digital
             products that are visually polished, performance-optimized, and
             deliver a consistent experience across all platforms.
@@ -106,18 +115,19 @@ export default function HeroSection() {
           </motion.button>
         </motion.div>
 
-        {/* Hero Card hanya desktop */}
+        {/* Hero Card (desktop only) */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
+          className='hidden md:block'
         >
           <Image
             src='/hero-card.png'
             alt='Hero Card'
             width={341}
             height={671}
-            className='hidden md:block absolute top-0 right-[131px]'
+            className='h-auto'
             priority
           />
         </motion.div>

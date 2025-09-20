@@ -17,8 +17,7 @@ export default function Contact() {
   return (
     <section
       id='contact'
-      className='relative w-full md:w-[1440px] h-auto md:h-[1010px] mx-auto overflow-hidden flex flex-col md:flex-row items-start justify-center gap-10 md:gap-20 px-6 md:px-0 py-12
-      bg-black md:bg-gradient-to-b md:from-black md:via-black md:to-[#027380]'
+      className='relative w-full h-auto mx-auto overflow-hidden bg-black md:bg-gradient-to-b md:from-black md:via-black md:to-[#027380] px-6 sm:px-8 py-12'
     >
       {/* Background */}
       <Image
@@ -36,7 +35,7 @@ export default function Contact() {
         className='block md:hidden absolute bottom-0 left-0 w-full h-auto pointer-events-none select-none'
       />
 
-      <div className='relative z-10 flex flex-col md:flex-row gap-10 md:gap-20 w-full md:w-[1180px]'>
+      <div className='relative z-10 flex flex-col md:flex-row gap-10 md:gap-20 w-full max-w-[1200px] mx-auto'>
         {/* Left: Form */}
         <form
           onSubmit={handleSubmit}
@@ -57,21 +56,21 @@ export default function Contact() {
           <input
             type='text'
             placeholder='Enter your name'
-            className='w-full h-[56px] bg-transparent border border-gray-700 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0]'
+            className='w-full h-[56px] bg-transparent border border-gray-700 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0] transition-colors duration-200 rounded-md'
           />
           <input
             type='email'
             placeholder='Enter your email'
-            className='w-full h-[56px] bg-transparent border border-gray-700 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0]'
+            className='w-full h-[56px] bg-transparent border border-gray-700 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0] transition-colors duration-200 rounded-md'
           />
           <textarea
             placeholder='Enter your message'
-            className='w-full h-[200px] bg-transparent border border-gray-700 p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0]'
+            className='w-full h-[200px] bg-transparent border border-gray-700 p-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#149BB0] transition-colors duration-200 rounded-md'
           />
 
           <button
             type='submit'
-            className='mt-4 flex items-center justify-center gap-2 w-full h-[56px] bg-white text-black font-medium hover:bg-gray-200 transition-colors'
+            className='mt-4 flex items-center justify-center gap-2 w-full h-[56px] bg-white text-black font-medium hover:bg-gray-200 transition-colors rounded-md'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

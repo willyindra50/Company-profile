@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Trusted() {
   return (
-    <section className='relative w-full md:w-[1440px] h-auto md:h-[1065px] text-white mx-auto px-5 sm:px-8 md:px-0 py-16'>
+    <section className='relative w-full h-auto bg-black text-white px-5 sm:px-8 py-16'>
       {/* Header */}
       <div className='text-center mb-12'>
         <h2 className='text-3xl sm:text-4xl md:text-[40px] font-bold mb-4'>
@@ -16,10 +16,10 @@ export default function Trusted() {
       </div>
 
       {/* Grid Layout */}
-      <div className='grid grid-cols-1 md:grid-cols-[448px_732px] gap-8 justify-center'>
+      <div className='grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 max-w-[1200px] mx-auto'>
         {/* 8X Box */}
         <div
-          className='relative w-full md:w-[448px] h-auto md:h-[751px] p-8 flex flex-col justify-between border border-gray-700'
+          className='relative w-full h-auto p-8 flex flex-col justify-between border border-gray-700'
           style={{
             backgroundImage: "url('/BG-8x.png')",
             backgroundSize: 'cover',
@@ -71,7 +71,7 @@ export default function Trusted() {
         {/* Right Column */}
         <div className='flex flex-col gap-5'>
           {/* 3X Box */}
-          <div className='relative w-full md:w-[732px] h-auto md:h-[367px] p-8 flex flex-col justify-between border border-gray-700'>
+          <div className='relative w-full h-auto p-8 flex flex-col justify-between border border-gray-700'>
             <div>
               <h3 className='text-[28px] font-bold'>3X</h3>
               <p className='text-lg font-semibold mb-4'>
@@ -116,7 +116,7 @@ export default function Trusted() {
 
           {/* Bottom Two Boxes */}
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-            <div className='relative w-full md:w-[356px] h-auto md:h-[364px] p-6 flex flex-col justify-between border border-gray-700'>
+            <div className='relative w-full h-auto p-6 flex flex-col justify-between border border-gray-700'>
               <div>
                 <div className='flex text-yellow-400 mb-4'>
                   {'★★★★★'.split('').map((star, i) => (
@@ -154,7 +154,7 @@ export default function Trusted() {
               </div>
             </div>
 
-            <div className='relative w-full md:w-[356px] h-auto md:h-[364px] p-6 flex flex-col justify-between border border-gray-700 justify-self-end'>
+            <div className='relative w-full h-auto p-6 flex flex-col justify-between border border-gray-700'>
               <div>
                 <div className='flex text-yellow-400 mb-4'>
                   {'★★★★★'.split('').map((star, i) => (
