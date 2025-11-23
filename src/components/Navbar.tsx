@@ -36,7 +36,7 @@ export default function Navbar() {
           className='font-bold cursor-pointer'
           onClick={() => handleScroll('hero')}
         >
-          Edwin
+          Willy
         </span>
         <span
           className='cursor-pointer hover:text-gray-300'
@@ -90,7 +90,7 @@ export default function Navbar() {
             className='font-bold text-lg cursor-pointer'
             onClick={() => handleScroll('hero')}
           >
-            Edwin
+            Willy
           </span>
           <button onClick={() => setOpen(true)}>
             <Menu className='w-7 h-7' />
