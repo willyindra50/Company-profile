@@ -10,7 +10,7 @@ const projects = [
     title: 'Portofolio 1',
     year: '2025',
     image: '/porto-1.png',
-    link: 'https://willy-todolist.vercel.app/',
+    link: 'https://movie-willy.vercel.app/',
   },
   {
     id: 2,

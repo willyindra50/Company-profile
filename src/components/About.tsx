@@ -70,8 +70,8 @@ export default function About() {
           {/* Left Person Image */}
           <div className='flex justify-center md:block'>
             <Image
-              src='/person-laptop.jpg'
-              alt='Person with Laptop'
+              src='/react-willy.png'
+              alt='react willy'
               width={453}
               height={513}
               className='rounded-md w-[361px] sm:w-[360px] md:w-[453px] h-auto'
